@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="lib" projectFiles="true">
+        <logicalFolder name="f1" displayName="algTranslator" projectFiles="true">
+          <itemPath>lib/algTranslator/src/common/basAlgTranslator.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/basAlgTranslator_Line.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/basAlgTranslator_Thermo.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/basTweak.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_ForCir.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_ForLine.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_LineDirect.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_Switcher.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_Thermo.cpp</itemPath>
+          <itemPath>lib/algTranslator/src/common/clsAlgTranslator_ThermoB.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="libSwarmComm" projectFiles="true">
+          <itemPath>lib/libSwarmComm/src/common/basTransport.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/common/clsTransport_WAMV.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="libSwarmNet" projectFiles="true">
+          <itemPath>lib/libSwarmNet/source/common/basJson.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/basJsonServer.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/basSwarm.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/basSwarmJson.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonCoreSetup.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonDataSet.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonDialog.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonEventGraphCollection.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonGraph.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonIPC.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonLeader.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonLeaderControl.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonObjectRequest.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonObjectResult.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonRPCMethod.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonRPCResult.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonSelection.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonSelectionSet.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonServer.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonSpecialDef.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonSwarmConstants_dataDiver.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonTweakSet.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonVehicle.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="vehicleSupport" projectFiles="true">
+          <itemPath>lib/vehicleSupport/source/targets/linux/clsGeoConverter.cpp</itemPath>
+          <itemPath>lib/vehicleSupport/source/common/crc.c</itemPath>
+          <itemPath>lib/vehicleSupport/source/common/geoCalc.cpp</itemPath>
+          <itemPath>lib/vehicleSupport/source/common/math-utils.c</itemPath>
+          <itemPath>lib/vehicleSupport/source/targets/linux/seinterconnect.cpp</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="module" projectFiles="true">
+        <itemPath>module/sleep.c</itemPath>
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>lib/vehicleSupport/include/common</pElem>
+            <pElem>lib/vehicleSupport/include/targets/linux</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>lib/algTranslator/include/common</pElem>
+            <pElem>lib/libSwarmComm/include/common</pElem>
+            <pElem>lib/libSwarmNet/include/common</pElem>
+            <pElem>lib/libSwarmComm/include/targets/linux</pElem>
+            <pElem>lib/vehicleSupport/include/common</pElem>
+            <pElem>lib/vehicleSupport/include/targets/linux</pElem>
+            <pElem>module</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>proj</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basAlgTranslator_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basAlgTranslator_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basTweak.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ForCir.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ForLine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_LineDirect.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_Switcher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ThermoB.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/basTransport.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basJsonServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basSwarm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonCoreSetup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonDataSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonDialog.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonEventGraphCollection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonGraph.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonIPC.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonLeader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonLeaderControl.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonObjectRequest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonObjectResult.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonRPCMethod.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonRPCResult.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSelection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSelectionSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSpecialDef.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSwarmConstants_dataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonTweakSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/crc.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/geoCalc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/math-utils.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/targets/linux/clsGeoConverter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/targets/linux/seinterconnect.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="module/sleep.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basAlgTranslator_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basAlgTranslator_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/basTweak.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ForCir.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ForLine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_LineDirect.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_Switcher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/algTranslator/src/common/clsAlgTranslator_ThermoB.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/basTransport.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basJsonServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basSwarm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonCoreSetup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonDataSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonDialog.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonEventGraphCollection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonGraph.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonIPC.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonLeader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonLeaderControl.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonObjectRequest.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonObjectResult.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonRPCMethod.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonRPCResult.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSelection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSelectionSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSpecialDef.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonSwarmConstants_dataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonTweakSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/crc.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/geoCalc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/math-utils.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/targets/linux/clsGeoConverter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/targets/linux/seinterconnect.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="module/sleep.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
