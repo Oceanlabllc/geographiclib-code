@@ -1,0 +1,12 @@
+[submodule "lib/libSwarmComm"]
+	path = lib/libSwarmComm
+	url = https://github.com/Oceanlabllc/libSwarmComm
+[submodule "lib/libSwarmNet"]
+	path = lib/libSwarmNet
+	url = https://github.com/Oceanlabllc/libSwarmNet
+[submodule "lib/algTranslator"]
+	path = lib/algTranslator
+	url = https://github.com/Oceanlabllc/algTranslator
+[submodule "lib/vehicleSupport"]
+	path = lib/vehicleSupport
+	url = https://github.com/Oceanlabllc/vehicleSupport
