@@ -130,7 +130,7 @@ void my_handler(int s){
         cout << asctime(now) << endl;
           
           int packetCount = 0;
-          if (!swarmO.begin((basJsonServer_Callbacks *)&serverO,"192.168.168.255"))
+          if (!swarmO.begin((basJsonServer_Callbacks *)&serverO,"239.255.0.1"))
           {
               cout << "Error swarmO.begin." <<endl;
               return -1;
