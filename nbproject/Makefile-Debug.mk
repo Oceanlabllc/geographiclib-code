@@ -45,7 +45,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_Switcher.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_Thermo.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_ThermoB.o \
-	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_Serial.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_UDP.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJson.o \
@@ -74,6 +75,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonTweakSet.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/geoCalc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/math-utils.o \
@@ -157,10 +159,15 @@ ${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_ThermoB.o: lib/algTra
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_ThermoB.o lib/algTranslator/src/common/clsAlgTranslator_ThermoB.cpp
 
-${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport.o: lib/libSwarmComm/src/common/basTransport.cpp
+${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_Serial.o: lib/libSwarmComm/src/common/basTransport_Serial.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport.o lib/libSwarmComm/src/common/basTransport.cpp
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_Serial.o lib/libSwarmComm/src/common/basTransport_Serial.cpp
+
+${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o: lib/libSwarmComm/src/common/basTransport_UDP.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o lib/libSwarmComm/src/common/basTransport_UDP.cpp
 
 ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o: lib/libSwarmComm/src/common/clsTransport_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
@@ -301,6 +308,11 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o: lib/libSwarmNet/sour
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o: lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp
 
 ${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o: lib/vehicleSupport/source/common/crc.c
 	${MKDIR} -p ${OBJECTDIR}/lib/vehicleSupport/source/common
