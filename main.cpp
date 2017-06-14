@@ -11,21 +11,21 @@
  * Created on January 25, 2017, 1:04 PM
  */
 
-      #include <sys/types.h>
-      #include <sys/stat.h>
-      #include <fcntl.h>
-      #include <unistd.h>
-      #include <termios.h>
-      #include <iostream>
-      #include <stdio.h>
-      #include <cstdlib>
-      #include <strings.h>
-      #include <time.h> //nanosleep
-      #include <clsJsonServer.h>
+    #include <sys/types.h>
+    #include <sys/stat.h>
+    #include <fcntl.h>
+    #include <unistd.h>
+    #include <termios.h>
+    #include <iostream>
+    #include <stdio.h>
+    #include <cstdlib>
+    #include <strings.h>
+    #include <time.h> //nanosleep
+    #include <clsJsonServer.h>
 
-      #include "clsSwarm_WAMV.h"
-    //  #include "clsControl_RCDataDiver.h"
-      #include "sleep.h"
+    #include "clsSwarm_WAMV_LocalBridge.h"
+
+    #include "sleep.h"
 
     #include "clsSerial_Xbee.h"
     #include "clsSerial_Xbee.h"
@@ -77,7 +77,7 @@ void my_handler(int s){
     
     using namespace std;
     
-    clsSwarm_WAMV swarmO;
+    clsSwarm_WAMV_LocalBridge swarmO;
     clsJsonServer serverO;
     
    // clsControl_RCDataDiver rcControlO;
@@ -100,23 +100,7 @@ void my_handler(int s){
         sigIntHandler.sa_flags = 0;
 
         sigaction(SIGINT, &sigIntHandler, NULL);        
-        
-        
-        
-          /*
-          rcControlO.begin("/dev/ttyUSB1",115200);   
-          rcControlO.connectToVehicle(19);
-          rcControlO.setImuVector(45,50);    
-         
-          
-          for (;;)
-          {
-            rcControlO.tickle();       
-            sleep(1);
-          }
-          
-          */
-        
+                        
         time_t timeNow;
         time(&timeNow);
         struct tm *now = localtime(&timeNow);
@@ -130,7 +114,7 @@ void my_handler(int s){
         cout << asctime(now) << endl;
           
           int packetCount = 0;
-          if (!swarmO.begin((basJsonServer_Callbacks *)&serverO,"239.255.0.1"))
+          if (!swarmO.begin((basJsonServer_Callbacks *)&serverO,"239.255.0.1", "0.0.0.0", 5672))
           {
               cout << "Error swarmO.begin." <<endl;
               return -1;
