@@ -76,6 +76,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/geoCalc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/math-utils.o \
@@ -313,6 +314,11 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o: lib/libS
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o: lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp
 
 ${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o: lib/vehicleSupport/source/common/crc.c
 	${MKDIR} -p ${OBJECTDIR}/lib/vehicleSupport/source/common
