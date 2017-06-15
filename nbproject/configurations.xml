@@ -87,6 +87,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>config.ini</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -123,6 +124,8 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="config.ini" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
             ex="false"
             tool="1"
@@ -394,6 +397,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="config.ini" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
             ex="false"
             tool="1"
