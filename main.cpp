@@ -136,7 +136,7 @@
      * @return
      * 0 if success. Other values indicate an error code. 
      */
-    main(int argc, char** argv)
+    main(int argc, char** argv) 
     {
           
         //---------------------------------------------------
@@ -195,14 +195,14 @@
         if (!setupSwarmObject(cfg))
         {
             cout << "Error Creating Swarm Object." << endl;
-            return -1;
+            exit(0);
         }
         
 
         if (_serverO.begin(_pSwarmO) != clsJsonServer::retVal_SUCCESS)
         {
             cout << "Error serverO.begin." <<endl;
-            return -1;
+            exit(0);
         }
 
         cout << "startup complete" << endl;
