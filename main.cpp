@@ -339,6 +339,7 @@
             udpSetup.in.address.port = cfg.remotePort;
             udpSetup.out.address.address = cfg.localIP;
             udpSetup.out.address.port = cfg.localPort;
+            udpSetup.maxUDPPayloadSize = 90-24;
                         
             clsSwarm_WAMV_RemoteBridge *pS = new clsSwarm_WAMV_RemoteBridge();
             
