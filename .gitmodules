@@ -10,3 +10,12 @@
 [submodule "lib/vehicleSupport"]
 	path = lib/vehicleSupport
 	url = https://github.com/Oceanlabllc/vehicleSupport
+[submodule "lib/libSwarmSim"]
+	path = lib/libSwarmSim
+	url = https://github.com/Oceanlabllc/libSwarmSim.git
+[submodule "lib/libSwarmCore"]
+	path = lib/libSwarmCore
+	url = https://github.com/Oceanlabllc/libSwarmCore.git
+[submodule "lib/swarmEngine"]
+	path = lib/swarmEngine
+	url = https://github.com/Oceanlabllc/swarmEngine.git

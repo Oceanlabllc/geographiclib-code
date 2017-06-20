@@ -29,6 +29,7 @@
 
     #include "clsSwarm_WAMV_LocalBridge.h"
     #include "clsSwarm_WAMV_RemoteBridge.h"
+    #include "clsSwarm_WAMV_Sim.h"
 
     #include "sleep.h"
 
@@ -64,7 +65,13 @@
         std::string localIP;
         uint16_t localPort;        
         std::string remoteIP;
-        uint16_t remotePort;        
+        uint16_t remotePort;
+        uint8_t vehicles; 
+        double originlat;
+        double originlon;
+        double tabletlat;
+        double tabletlon;
+        
     }config_s;
     
 /*
@@ -187,7 +194,13 @@
         cfg.remoteIP = pt.get<std::string>("satlink-remote.ip");
         cfg.remotePort = pt.get<uint16_t>("satlink-remote.port");        
                 
+        cfg.vehicles = pt.get<uint8_t>("sim.vehicles"); 
         
+        cfg.originlat = pt.get<double_t>("origin.latitude");
+        cfg.originlon = pt.get<double_t>("origin.longitude"); 
+        
+        cfg.tabletlat = pt.get<double_t>("tablet.latitude");
+        cfg.tabletlon = pt.get<double_t>("tablet.longitude"); 
         //---------------------------------------------------
         // OBJECT CREATION
         //---------------------------------------------------                                                       
@@ -352,6 +365,28 @@
 
         }
         
+        //---------------------------------------------------                                                       
+        else if (cfg.mode == "SIMULATOR")
+        //---------------------------------------------------                                                       
+        {
+            
+            location_s origin, tablet;
+            
+            origin.lat = cfg.originlat;
+            origin.lon = cfg.originlon;
+            tablet.lat = cfg.tabletlat;
+            tablet.lon = cfg.tabletlon;
+            
+            clsSwarm_WAMV_Sim *pS = new clsSwarm_WAMV_Sim(); 
+               
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV");            
+                       
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.swarmHostIP, cfg.swarmPort,  cfg.vehicles)) {            
+                ERROR_RETURN("Failed clsSwarm_WAMV begin.");
+            }
+            
+            _pSwarmO = pS;
+        }
         //---------------------------------------------------                                                       
         else
         //---------------------------------------------------                                                       

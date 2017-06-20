@@ -33,6 +33,20 @@
           <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/clsTransport_WAMV.cpp</itemPath>
         </logicalFolder>
+        <logicalFolder name="f6" displayName="libSwarmCore" projectFiles="true">
+          <itemPath>lib/libSwarmCore/source/common/basControl.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basControl_obj.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basControl_obj_cmdBasic.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basExtFault.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basLocality.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basPilot.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basPilot_cmdBasic.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basPower.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basRadio.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/basRadio_Swarm.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/common/clsControl_simple.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="libSwarmNet" projectFiles="true">
           <itemPath>lib/libSwarmNet/source/common/basJson.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basJsonServer.cpp</itemPath>
@@ -62,6 +76,41 @@
           <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="libSwarmSim" projectFiles="true">
+          <itemPath>lib/libSwarmSim/source/common/basRadioNode.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/basSwarmSim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/basSysSim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/basVModel.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/basVehicle.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/basVehicle_Pool.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsExtFault_sysSim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsPilot_sysSim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsPower_sysSim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsRadioChannel.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsSysSim_Simple.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsVModel_Ideal.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clslLocality_sysSim.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f7" displayName="swarmEngine" projectFiles="true">
+          <logicalFolder name="f1" displayName="common" projectFiles="true">
+            <itemPath>lib/swarmEngine/src/common/basSwarmAlg.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Line.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsNeighborList.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ForCir.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ForLine.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_Line.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_Switcher.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_Thermo.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.cpp</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="linux" projectFiles="true">
+          </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f4" displayName="vehicleSupport" projectFiles="true">
           <itemPath>lib/vehicleSupport/source/targets/linux/clsGeoConverter.cpp</itemPath>
@@ -114,6 +163,11 @@
             <pElem>lib/vehicleSupport/include/common</pElem>
             <pElem>lib/vehicleSupport/include/targets/linux</pElem>
             <pElem>module</pElem>
+            <pElem>lib/libSwarmSim/include/common</pElem>
+            <pElem>lib/libSwarmCore/include/common</pElem>
+            <pElem>lib/libSwarmCore/include/targets/WAMV</pElem>
+            <pElem>lib/swarmEngine/include/common</pElem>
+            <pElem>lib/swarmEngine/include/targets/linux</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -197,6 +251,66 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basControl.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basControl_obj.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basControl_obj_cmdBasic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basExtFault.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basLocality.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPilot.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPilot_cmdBasic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPower.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basRadio.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basRadio_Swarm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/clsControl_simple.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -342,6 +456,141 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basRadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basSwarmSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basSysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVModel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVehicle_Pool.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsExtFault_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsPilot_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsPower_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsRadioChannel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSysSim_Simple.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_Ideal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clslLocality_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsNeighborList.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ForCir.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ForLine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Switcher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -474,6 +723,66 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmCore/source/common/basControl.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basControl_obj.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basControl_obj_cmdBasic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basExtFault.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basLocality.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPilot.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPilot_cmdBasic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basPower.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basRadio.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/basRadio_Swarm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/common/clsControl_simple.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmNet/include/common/clsSwarm_WAMV_LocalBridge.h"
             ex="false"
             tool="3"
@@ -615,6 +924,141 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basRadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basSwarmSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basSysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVModel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/basVehicle_Pool.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsExtFault_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsPilot_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsPower_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsRadioChannel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSysSim_Simple.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_Ideal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clslLocality_sysSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsNeighborList.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ForCir.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ForLine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Line.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Switcher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.cpp"
             ex="false"
             tool="1"
             flavor2="0">
