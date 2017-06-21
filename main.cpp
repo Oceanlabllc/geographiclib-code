@@ -334,7 +334,7 @@
             
             if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV_LocalBridge");            
                       
-            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP, cfg.swarmHostIP, cfg.swarmPort)){
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP, cfg.localIP, cfg.localPort)){
                 ERROR_RETURN("Failed clsSwarm_WAMV_LocalBridge begin.");
             }
             
@@ -376,13 +376,13 @@
             origin.lat = cfg.originlat;
             origin.lon = cfg.originlon;
             tablet.lat = cfg.tabletlat;
-            tablet.lon = cfg.tabletlon;
+            tablet.lon = cfg.tabletlon;           
             
             clsSwarm_WAMV_Sim *pS = new clsSwarm_WAMV_Sim(); 
                
             if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV");            
                        
-            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.swarmHostIP, cfg.swarmPort,  cfg.vehicles)) {            
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.localIP, cfg.localPort,  cfg.vehicles)) {            
                 ERROR_RETURN("Failed clsSwarm_WAMV begin.");
             }
             
