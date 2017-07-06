@@ -44,8 +44,10 @@
           <itemPath>lib/libSwarmCore/source/common/basPower.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/basRadio.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/basRadio_Swarm.cpp</itemPath>
+          <itemPath>../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/clsControl_simple.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp</itemPath>
+          <itemPath>../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="libSwarmNet" projectFiles="true">
           <itemPath>lib/libSwarmNet/source/common/basJson.cpp</itemPath>
@@ -82,7 +84,6 @@
           <itemPath>lib/libSwarmSim/source/common/basSwarmSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/basSysSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/basVModel.cpp</itemPath>
-          <itemPath>lib/libSwarmSim/source/common/basVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/basVehicle_Pool.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsExtFault_sysSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsPilot_sysSim.cpp</itemPath>
@@ -93,7 +94,6 @@
           <itemPath>lib/libSwarmSim/source/common/clsSysSim_Simple.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsVModel_Ideal.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp</itemPath>
-          <itemPath>lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clslLocality_sysSim.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f7" displayName="swarmEngine" projectFiles="true">
@@ -101,6 +101,7 @@
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Line.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp</itemPath>
+            <itemPath>../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsNeighborList.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ForCir.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ForLine.cpp</itemPath>
@@ -178,6 +179,21 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="config.ini" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
@@ -480,11 +496,6 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmSim/source/common/basVehicle.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="lib/libSwarmSim/source/common/basVehicle_Pool.cpp"
             ex="false"
             tool="1"
@@ -531,11 +542,6 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -646,6 +652,21 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="config.ini" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
@@ -948,11 +969,6 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmSim/source/common/basVehicle.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="lib/libSwarmSim/source/common/basVehicle_Pool.cpp"
             ex="false"
             tool="1"
@@ -999,11 +1015,6 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="lib/libSwarmSim/source/common/clsVehicle_WAMV.cpp"
             ex="false"
             tool="1"
             flavor2="0">

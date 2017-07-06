@@ -319,7 +319,7 @@
             
             if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV");            
                        
-            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP)) {            
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP,cfg.swarmPort)) {            
                 ERROR_RETURN("Failed clsSwarm_WAMV begin.");
             }
             
@@ -334,7 +334,7 @@
             
             if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV_LocalBridge");            
                       
-            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP, cfg.localIP, cfg.localPort)){
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, cfg.swarmDestIP, cfg.swarmPort,cfg.localIP , cfg.localPort)){
                 ERROR_RETURN("Failed clsSwarm_WAMV_LocalBridge begin.");
             }
             
