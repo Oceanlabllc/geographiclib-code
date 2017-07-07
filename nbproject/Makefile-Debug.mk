@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/cc6264c9/basVehicle.o \
-	${OBJECTDIR}/_ext/9280873e/clsVehicle_WAMV_SIM.o \
 	${OBJECTDIR}/_ext/4b87ecd2/clsCollision_WAMV.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator_Line.o \
@@ -64,6 +63,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio_Swarm.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJson.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJsonServer.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarm.o \
@@ -154,11 +154,6 @@ ${OBJECTDIR}/_ext/cc6264c9/basVehicle.o: ../WAMVSwarmController/lib/libSwarmCore
 	${MKDIR} -p ${OBJECTDIR}/_ext/cc6264c9
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/cc6264c9/basVehicle.o ../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp
-
-${OBJECTDIR}/_ext/9280873e/clsVehicle_WAMV_SIM.o: ../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/9280873e
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/9280873e/clsVehicle_WAMV_SIM.o ../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp
 
 ${OBJECTDIR}/_ext/4b87ecd2/clsCollision_WAMV.o: ../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/4b87ecd2
@@ -294,6 +289,11 @@ ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o: lib/libSwarmC
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp
+
+${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o: lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/common -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp
 
 ${OBJECTDIR}/lib/libSwarmNet/source/common/basJson.o: lib/libSwarmNet/source/common/basJson.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common

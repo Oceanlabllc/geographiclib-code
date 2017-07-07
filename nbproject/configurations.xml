@@ -47,7 +47,7 @@
           <itemPath>../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/clsControl_simple.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp</itemPath>
-          <itemPath>../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="libSwarmNet" projectFiles="true">
           <itemPath>lib/libSwarmNet/source/common/basJson.cpp</itemPath>
@@ -180,11 +180,6 @@
         </linkerTool>
       </compileType>
       <item path="../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -327,6 +322,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -657,11 +657,6 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="../WAMVSwarmController/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp"
             ex="false"
             tool="1"
@@ -800,6 +795,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
             ex="false"
             tool="1"
             flavor2="0">
