@@ -35,8 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/cc6264c9/basVehicle.o \
-	${OBJECTDIR}/_ext/4b87ecd2/clsCollision_WAMV.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator_Line.o \
 	${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator_Thermo.o \
@@ -61,6 +59,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basPower.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio_Swarm.o \
+	${OBJECTDIR}/lib/libSwarmCore/source/common/basVehicle.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o \
@@ -110,6 +109,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Line.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o \
+	${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_WAMV.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsNeighborList.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ForCir.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ForLine.o \
@@ -149,16 +149,6 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bridgewamv: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bridgewamv ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/cc6264c9/basVehicle.o: ../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/cc6264c9
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/cc6264c9/basVehicle.o ../WAMVSwarmController/lib/libSwarmCore/source/common/basVehicle.cpp
-
-${OBJECTDIR}/_ext/4b87ecd2/clsCollision_WAMV.o: ../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/4b87ecd2
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/4b87ecd2/clsCollision_WAMV.o ../WAMVSwarmController/lib/swarmEngine/src/common/clsCollision_WAMV.cpp
 
 ${OBJECTDIR}/lib/algTranslator/src/common/basAlgTranslator.o: lib/algTranslator/src/common/basAlgTranslator.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/algTranslator/src/common
@@ -279,6 +269,11 @@ ${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio_Swarm.o: lib/libSwarmCore/s
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio_Swarm.o lib/libSwarmCore/source/common/basRadio_Swarm.cpp
+
+${OBJECTDIR}/lib/libSwarmCore/source/common/basVehicle.o: lib/libSwarmCore/source/common/basVehicle.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/common/basVehicle.o lib/libSwarmCore/source/common/basVehicle.cpp
 
 ${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o: lib/libSwarmCore/source/common/clsControl_simple.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/common
@@ -524,6 +519,11 @@ ${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o: lib/swarmEngine/sr
 	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp
+
+${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_WAMV.o: lib/swarmEngine/src/common/clsCollision_WAMV.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_WAMV.o lib/swarmEngine/src/common/clsCollision_WAMV.cpp
 
 ${OBJECTDIR}/lib/swarmEngine/src/common/clsNeighborList.o: lib/swarmEngine/src/common/clsNeighborList.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
