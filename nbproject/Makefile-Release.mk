@@ -47,8 +47,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_ThermoB.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_Serial.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_DataDiver.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_SwarmDD.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_UDP.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basControl.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basControl_obj.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basControl_obj_cmdBasic.o \
@@ -83,14 +87,18 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSelection.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSelectionSet.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer_Manual.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSpecialDef.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSwarmConstants_dataDiver.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonTweakSet.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o \
-	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o \
-	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o \
-	${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/basRadioNode.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/basSwarmSim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/basSysSim.o \
@@ -210,15 +218,35 @@ ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o: lib/libSwarmComm/sr
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o lib/libSwarmComm/src/common/basTransport_UDP.cpp
 
+${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_DataDiver.o: lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_DataDiver.o lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp
+
+${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_SwarmDD.o: lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_SwarmDD.o lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp
+
 ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o: lib/libSwarmComm/src/common/clsTransport_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o lib/libSwarmComm/src/common/clsTransport_WAMV.cpp
 
+${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial.o: lib/libSwarmComm/src/targets/linux/clsSerial.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial.o lib/libSwarmComm/src/targets/linux/clsSerial.cpp
+
 ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_UDP.o: lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_UDP.o lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp
+
+${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.o: lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.o lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp
 
 ${OBJECTDIR}/lib/libSwarmCore/source/common/basControl.o: lib/libSwarmCore/source/common/basControl.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/common
@@ -390,6 +418,11 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer.o: lib/libSwarmNet/sour
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer.o lib/libSwarmNet/source/common/clsJsonServer.cpp
 
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer_Manual.o: lib/libSwarmNet/source/common/clsJsonServer_Manual.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonServer_Manual.o lib/libSwarmNet/source/common/clsJsonServer_Manual.cpp
+
 ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.o: lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
@@ -415,20 +448,35 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o: lib/libSwarmNet/sou
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o lib/libSwarmNet/source/common/clsJsonVehicle.cpp
 
-${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o: lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o: lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV.o lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp
 
-${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o: lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp
-	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o: lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.o lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp
 
-${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o: lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp
-	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o: lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.o lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o: lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.o: lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.o lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.o: lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.o lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.cpp
 
 ${OBJECTDIR}/lib/libSwarmSim/source/common/basRadioNode.o: lib/libSwarmSim/source/common/basRadioNode.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common

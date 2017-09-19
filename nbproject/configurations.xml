@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>lib/libSwarmNet/include/common/clsSwarm_WAMV_LocalBridge.h</itemPath>
+      <itemPath>lib/libSwarmNet/include/target/WAMV/clsSwarm_WAMV_LocalBridge.h</itemPath>
       <itemPath>lib/libSwarmComm/include/common/clsTransport_Ligado.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -30,7 +30,11 @@
         <logicalFolder name="f2" displayName="libSwarmComm" projectFiles="true">
           <itemPath>lib/libSwarmComm/src/common/basTransport_Serial.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/basTransport_UDP.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/clsTransport_WAMV.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f6" displayName="libSwarmCore" projectFiles="true">
@@ -54,6 +58,7 @@
           <itemPath>lib/libSwarmNet/source/common/basJsonServer.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basSwarm.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basSwarmJson.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonCoreSetup.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonDataSet.cpp</itemPath>
@@ -70,14 +75,17 @@
           <itemPath>lib/libSwarmNet/source/common/clsJsonSelection.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonSelectionSet.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonServer.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonServer_Manual.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonSpecialDef.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonSwarmConstants_dataDiver.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonTweakSet.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonVehicle.cpp</itemPath>
-          <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp</itemPath>
-          <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp</itemPath>
-          <itemPath>lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f5" displayName="libSwarmSim" projectFiles="true">
           <itemPath>lib/libSwarmSim/source/common/basRadioNode.cpp</itemPath>
@@ -159,7 +167,7 @@
           <incDir>
             <pElem>lib/algTranslator/include/common</pElem>
             <pElem>lib/libSwarmComm/include/common</pElem>
-            <pElem>lib/libSwarmNet/include/common</pElem>
+            <pElem>lib/libSwarmNet/include/targets/DataDiver</pElem>
             <pElem>lib/libSwarmComm/include/targets/linux</pElem>
             <pElem>lib/vehicleSupport/include/common</pElem>
             <pElem>lib/vehicleSupport/include/targets/linux</pElem>
@@ -169,6 +177,8 @@
             <pElem>lib/libSwarmCore/include/targets/WAMV</pElem>
             <pElem>lib/swarmEngine/include/common</pElem>
             <pElem>lib/swarmEngine/include/targets/linux</pElem>
+            <pElem>lib/libSwarmNet/include/common</pElem>
+            <pElem>lib/libSwarmNet/include/targets/WAMV</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -246,12 +256,32 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmComm/src/common/clsTransport_WAMV.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -326,7 +356,7 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/include/common/clsSwarm_WAMV_LocalBridge.h"
+      <item path="lib/libSwarmNet/include/target/WAMV/clsSwarm_WAMV_LocalBridge.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -431,6 +461,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonServer_Manual.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp"
             ex="false"
             tool="1"
@@ -456,17 +491,32 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp"
+      <item path="lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp"
+      <item path="lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp"
+      <item path="lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -719,12 +769,32 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmComm/src/common/clsTransport_WAMV.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -799,7 +869,7 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/include/common/clsSwarm_WAMV_LocalBridge.h"
+      <item path="lib/libSwarmNet/include/target/WAMV/clsSwarm_WAMV_LocalBridge.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -904,6 +974,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmNet/source/common/clsJsonServer_Manual.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmNet/source/common/clsJsonSetSwarmAlg.cpp"
             ex="false"
             tool="1"
@@ -929,17 +1004,32 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV.cpp"
+      <item path="lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_LocalBridge.cpp"
+      <item path="lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="lib/libSwarmNet/source/common/clsSwarm_WAMV_RemoteBridge.cpp"
+      <item path="lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.cpp"
             ex="false"
             tool="1"
             flavor2="0">
