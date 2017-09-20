@@ -1,0 +1,11 @@
+{
+    
+    "1":{  "accessID": 1, "nameText": "OldThermo", "helpText":"The original swarm algorithm. Depricated.", "visible": false  },
+    "2":{  "accessID": 2, "nameText": "ThermoB", "helpText": "Vehicles are distributed evenly across an area.", "visible": true  },
+    "3":{  "accessID": 3, "nameText": "LineDirect", "helpText": "Vehicles use swarming to assemble themselves along a line.", "visible": false  },
+    "4":{  "accessID": 4, "nameText": "Formation Circle", "helpText": "Vehicles form a circle around a designated leader.", "visible": true  },
+    "5":{  "accessID": 5, "nameText": "Formation Line", "helpText": "Vehicles assemble into a line according to their vehicle ID.", "visible": true  }                        
+    
+}
+
+   
