@@ -31,6 +31,8 @@
     #include "clsSwarm_WAMV_RemoteBridge.h"
     #include "clsSwarm_WAMV_Sim.h"
 
+    #include "clsSwarm_DataDiver.h"
+
     #include "sleep.h"
 
     #include "clsSerial_Xbee.h"
@@ -388,6 +390,31 @@
             
             _pSwarmO = pS;
         }
+        
+        //---------------------------------------------------                                                       
+        else if (cfg.mode == "DATADIVER")
+        //---------------------------------------------------                                                       
+        {
+            
+            location_s origin, tablet;
+            
+            origin.lat = cfg.originlat;
+            origin.lon = cfg.originlon;
+            tablet.lat = cfg.tabletlat;
+            tablet.lon = cfg.tabletlon;           
+            
+            clsSwarm_DataDiver *pS = new clsSwarm_DataDiver(); 
+               
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DataDiver");            
+                                               
+            if (!pS->begin("/dev/RADIO_RC", "/dev/RADIO_SWARM",(basJsonServer_Callbacks *)&_serverO, "")) 
+            {            
+                ERROR_RETURN("Failed clsSwarm_WAMV begin.");
+            }
+            
+            _pSwarmO = pS;
+        }
+        
         //---------------------------------------------------                                                       
         else
         //---------------------------------------------------                                                       
