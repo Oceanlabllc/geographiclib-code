@@ -51,6 +51,7 @@
           <itemPath>lib/libSwarmCore/source/common/basVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/clsControl_simple.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="libSwarmNet" projectFiles="true">
@@ -102,6 +103,7 @@
           <itemPath>lib/libSwarmSim/source/common/clsSysSim_Simple.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsVModel_Ideal.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsVModel_WAMV.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clslLocality_sysSim.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f7" displayName="swarmEngine" projectFiles="true">
@@ -109,6 +111,7 @@
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Line.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp</itemPath>
+            <itemPath>lib/swarmEngine/src/common/clsCollision_Repulsion.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsCollision_WAMV.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsNeighborList.cpp</itemPath>
             <itemPath>lib/swarmEngine/src/common/clsSwarmAlg_ForCir.cpp</itemPath>
@@ -347,6 +350,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -591,6 +599,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmSim/source/common/clslLocality_sysSim.cpp"
             ex="false"
             tool="1"
@@ -607,6 +620,11 @@
             flavor2="0">
       </item>
       <item path="lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsCollision_Repulsion.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -864,6 +882,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp"
             ex="false"
             tool="1"
@@ -1104,6 +1127,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmSim/source/common/clsVModel_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmSim/source/common/clslLocality_sysSim.cpp"
             ex="false"
             tool="1"
@@ -1120,6 +1148,11 @@
             flavor2="0">
       </item>
       <item path="lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/swarmEngine/src/common/clsCollision_Repulsion.cpp"
             ex="false"
             tool="1"
             flavor2="0">

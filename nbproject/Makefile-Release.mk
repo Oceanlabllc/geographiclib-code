@@ -66,6 +66,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basVehicle.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJson.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJsonServer.o \
@@ -113,10 +114,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSysSim_Simple.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_Ideal.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_SimpleStick.o \
+	${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_WAMV.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clslLocality_sysSim.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Line.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o \
+	${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_Repulsion.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_WAMV.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsNeighborList.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ForCir.o \
@@ -312,6 +315,11 @@ ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o: lib/libSwarmC
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp
+
+${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.o: lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.o lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp
 
 ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o: lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
@@ -548,6 +556,11 @@ ${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_SimpleStick.o: lib/libSwarm
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_SimpleStick.o lib/libSwarmSim/source/common/clsVModel_SimpleStick.cpp
 
+${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_WAMV.o: lib/libSwarmSim/source/common/clsVModel_WAMV.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_WAMV.o lib/libSwarmSim/source/common/clsVModel_WAMV.cpp
+
 ${OBJECTDIR}/lib/libSwarmSim/source/common/clslLocality_sysSim.o: lib/libSwarmSim/source/common/clslLocality_sysSim.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
 	${RM} "$@.d"
@@ -567,6 +580,11 @@ ${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o: lib/swarmEngine/sr
 	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/swarmEngine/src/common/basSwarmAlg_Thermo.o lib/swarmEngine/src/common/basSwarmAlg_Thermo.cpp
+
+${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_Repulsion.o: lib/swarmEngine/src/common/clsCollision_Repulsion.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_Repulsion.o lib/swarmEngine/src/common/clsCollision_Repulsion.cpp
 
 ${OBJECTDIR}/lib/swarmEngine/src/common/clsCollision_WAMV.o: lib/swarmEngine/src/common/clsCollision_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
