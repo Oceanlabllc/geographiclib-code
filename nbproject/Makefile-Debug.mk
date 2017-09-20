@@ -110,6 +110,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsPower_sysSim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsRadioChannel.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o \
+	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSysSim_Simple.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsVModel_Ideal.o \
@@ -535,6 +536,11 @@ ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o: lib/libSwarmSi
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp
+
+${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.o: lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.o lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp
 
 ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.o: lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common

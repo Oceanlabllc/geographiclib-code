@@ -99,6 +99,7 @@
           <itemPath>lib/libSwarmSim/source/common/clsPower_sysSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsRadioChannel.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSysSim_Simple.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsVModel_Ideal.cpp</itemPath>
@@ -575,6 +576,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -1103,6 +1109,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp"
             ex="false"
             tool="1"
             flavor2="0">

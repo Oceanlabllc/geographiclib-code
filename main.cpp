@@ -32,6 +32,7 @@
     #include "clsSwarm_WAMV_Sim.h"
 
     #include "clsSwarm_DataDiver.h"
+    #include "clsSwarm_DataDiver_Sim.h"
 
     #include "sleep.h"
 
@@ -414,6 +415,29 @@
             
             _pSwarmO = pS;
         }
+        
+        //---------------------------------------------------                                                       
+        else if (cfg.mode == "DATADIVER_SIM")
+        //---------------------------------------------------                                                       
+        {
+            
+            location_s origin, tablet;
+            
+            origin.lat = cfg.originlat;
+            origin.lon = cfg.originlon;
+            tablet.lat = cfg.tabletlat;
+            tablet.lon = cfg.tabletlon;           
+            
+            clsSwarm_DataDiver_Sim *pS = new clsSwarm_DataDiver_Sim(); 
+               
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV");            
+                       
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.localIP, cfg.localPort,  cfg.vehicles)) {            
+                ERROR_RETURN("Failed clsSwarm_WAMV begin.");
+            }
+            
+            _pSwarmO = pS;
+        }        
         
         //---------------------------------------------------                                                       
         else
