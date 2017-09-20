@@ -407,7 +407,7 @@
                
             if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DataDiver");            
                                                
-            if (!pS->begin("/dev/RADIO_RC", "/dev/RADIO_SWARM",(basJsonServer_Callbacks *)&_serverO, "algOverride_DD.json")) 
+            if (!pS->begin("/dev/RADIO_SWARM", "/dev/RADIO_RC",(basJsonServer_Callbacks *)&_serverO, "algOverride_DD.json")) 
             {            
                 ERROR_RETURN("Failed clsSwarm_WAMV begin.");
             }
