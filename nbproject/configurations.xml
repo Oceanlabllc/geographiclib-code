@@ -33,6 +33,7 @@
           <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_UDP.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/targets/linux/clsSerial_Xbee.cpp</itemPath>
+          <itemPath>lib/libSwarmComm/src/common/clsTransmissionTimer.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/clsTransport_SwarmDD.cpp</itemPath>
           <itemPath>lib/libSwarmComm/src/common/clsTransport_WAMV.cpp</itemPath>
@@ -83,6 +84,7 @@
           <itemPath>lib/libSwarmNet/source/common/clsJsonTweakSet.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsMultiBridge.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.cpp</itemPath>
@@ -256,6 +258,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmComm/src/common/basTransport_UDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmComm/src/common/clsTransmissionTimer.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -501,6 +508,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsMultiBridge.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -793,6 +805,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmComm/src/common/clsTransmissionTimer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp"
             ex="false"
             tool="1"
@@ -1034,6 +1051,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsMultiBridge.cpp"
             ex="false"
             tool="1"
             flavor2="0">

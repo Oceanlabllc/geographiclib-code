@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/algTranslator/src/common/clsAlgTranslator_ThermoB.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_Serial.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o \
+	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransmissionTimer.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_DataDiver.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_SwarmDD.o \
 	${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_WAMV.o \
@@ -95,6 +96,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonTweakSet.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicle.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsMultiBridge.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o \
@@ -221,6 +223,11 @@ ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o: lib/libSwarmComm/sr
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/basTransport_UDP.o lib/libSwarmComm/src/common/basTransport_UDP.cpp
+
+${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransmissionTimer.o: lib/libSwarmComm/src/common/clsTransmissionTimer.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransmissionTimer.o lib/libSwarmComm/src/common/clsTransmissionTimer.cpp
 
 ${OBJECTDIR}/lib/libSwarmComm/src/common/clsTransport_DataDiver.o: lib/libSwarmComm/src/common/clsTransport_DataDiver.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmComm/src/common
@@ -461,6 +468,11 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o: lib/libSwar
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonVehicleOverride.o lib/libSwarmNet/source/common/clsJsonVehicleOverride.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsMultiBridge.o: lib/libSwarmNet/source/common/clsMultiBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/WAMV -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsMultiBridge.o lib/libSwarmNet/source/common/clsMultiBridge.cpp
 
 ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o: lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
