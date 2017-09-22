@@ -61,6 +61,7 @@
           <itemPath>lib/libSwarmNet/source/common/basSwarm.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basSwarmJson.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsHeartbeat.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonCoreSetup.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonDataSet.cpp</itemPath>
@@ -393,6 +394,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsHeartbeat.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -936,6 +942,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsHeartbeat.cpp"
             ex="false"
             tool="1"
             flavor2="0">
