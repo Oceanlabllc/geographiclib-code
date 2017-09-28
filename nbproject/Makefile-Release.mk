@@ -66,7 +66,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basRadio_Swarm.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/basVehicle.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o \
+	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o \
+	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.o \
 	${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJson.o \
@@ -320,10 +322,20 @@ ${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o: lib/libSwarmCor
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/common/clsControl_simple.o lib/libSwarmCore/source/common/clsControl_simple.cpp
 
+${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.o: lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.o lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.cpp
+
 ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o: lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.o lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp
+
+${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.o: lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.o lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.cpp
 
 ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.o: lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmCore/source/targets/WAMV

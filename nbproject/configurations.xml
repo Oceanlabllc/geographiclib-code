@@ -51,7 +51,9 @@
           <itemPath>lib/libSwarmCore/source/common/basRadio_Swarm.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/basVehicle.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/common/clsControl_simple.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp</itemPath>
+          <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_DataDiver_SIM.cpp</itemPath>
           <itemPath>lib/libSwarmCore/source/targets/WAMV/clsVehicle_WAMV_SIM.cpp</itemPath>
         </logicalFolder>
@@ -181,11 +183,12 @@
             <pElem>module</pElem>
             <pElem>lib/libSwarmSim/include/common</pElem>
             <pElem>lib/libSwarmCore/include/common</pElem>
-            <pElem>lib/libSwarmCore/include/targets/WAMV</pElem>
+            <pElem>lib/libSwarmCore/include/targets/DataDiver</pElem>
             <pElem>lib/swarmEngine/include/common</pElem>
             <pElem>lib/swarmEngine/include/targets/linux</pElem>
             <pElem>lib/libSwarmNet/include/common</pElem>
             <pElem>lib/libSwarmNet/include/targets/WAMV</pElem>
+            <pElem>lib/libSwarmCore/include/targets/WAMV</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -358,7 +361,17 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -906,7 +919,17 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_DD_FullSim.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/libSwarmCore/source/targets/WAMV/clsRadio_WAMV.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmCore/source/targets/WAMV/clsVehicle_DD_FullSim.cpp"
             ex="false"
             tool="1"
             flavor2="0">
