@@ -115,6 +115,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsPower_sysSim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsRadioChannel.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o \
+	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.o \
 	${OBJECTDIR}/lib/libSwarmSim/source/common/clsSysSim_Simple.o \
@@ -566,6 +567,11 @@ ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o: lib/libSwarmSi
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSerial_RadioNode.o lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp
+
+${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.o: lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.o lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.cpp
 
 ${OBJECTDIR}/lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.o: lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmSim/source/common

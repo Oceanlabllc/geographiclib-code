@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1"
+                   displayName="Config FIles"
+                   projectFiles="true"
+                   kind="ROOT">
+      <itemPath>algOverride_DD.json</itemPath>
+      <itemPath>collision.ini</itemPath>
+      <itemPath>config.ini</itemPath>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
@@ -104,6 +112,7 @@
           <itemPath>lib/libSwarmSim/source/common/clsPower_sysSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsRadioChannel.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp</itemPath>
+          <itemPath>lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSwarm_DataDiver_Sim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSwarm_WAMV_Sim.cpp</itemPath>
           <itemPath>lib/libSwarmSim/source/common/clsSysSim_Simple.cpp</itemPath>
@@ -154,7 +163,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>config.ini</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -199,6 +207,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="algOverride_DD.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="collision.ini" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="config.ini" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
@@ -607,6 +619,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -757,6 +774,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="algOverride_DD.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="collision.ini" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="config.ini" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/algTranslator/src/common/basAlgTranslator.cpp"
@@ -1165,6 +1186,11 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmSim/source/common/clsSerial_RadioNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmSim/source/common/clsSwarm_DD_FullSim.cpp"
             ex="false"
             tool="1"
             flavor2="0">
