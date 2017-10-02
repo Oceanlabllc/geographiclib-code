@@ -410,7 +410,7 @@
                                                
             if (!pS->begin("/dev/RADIO_SWARM", "/dev/RADIO_RC",(basJsonServer_Callbacks *)&_serverO, "algOverride_DD.json")) 
             {            
-                ERROR_RETURN("Failed clsSwarm_WAMV begin.");
+                ERROR_RETURN("Failed clsSwarm_DataDiver begin.");
             }
             
             _pSwarmO = pS;
