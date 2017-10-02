@@ -75,6 +75,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJsonServer.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarm.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsHeartbeat.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonBridgeInfo.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonCoreSetup.o \
@@ -367,6 +368,11 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o: lib/libSwarmNet/sourc
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o lib/libSwarmNet/source/common/basSwarmJson.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o: lib/libSwarmNet/source/common/clsBridgeLocal.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o lib/libSwarmNet/source/common/clsBridgeLocal.cpp
 
 ${OBJECTDIR}/lib/libSwarmNet/source/common/clsHeartbeat.o: lib/libSwarmNet/source/common/clsHeartbeat.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
