@@ -70,6 +70,8 @@
           <itemPath>lib/libSwarmNet/source/common/basJsonServer.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basSwarm.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/basSwarmJson.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsBridgeLocal.cpp</itemPath>
+          <itemPath>lib/libSwarmNet/source/common/clsBridgeRemote.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsHeartbeat.cpp</itemPath>
           <itemPath>lib/libSwarmNet/source/common/clsJsonBridgeInfo.cpp</itemPath>
@@ -419,6 +421,16 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsBridgeLocal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsBridgeRemote.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -986,6 +998,16 @@
             flavor2="0">
       </item>
       <item path="lib/libSwarmNet/source/common/basSwarmJson.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsBridgeLocal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/libSwarmNet/source/common/clsBridgeRemote.cpp"
             ex="false"
             tool="1"
             flavor2="0">

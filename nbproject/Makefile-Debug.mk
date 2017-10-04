@@ -75,6 +75,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basJsonServer.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarm.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeRemote.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsHeartbeat.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonBridgeInfo.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsJsonCoreSetup.o \
@@ -367,6 +369,16 @@ ${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o: lib/libSwarmNet/sourc
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/DataDiver -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -Ilib/libSwarmCore/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/basSwarmJson.o lib/libSwarmNet/source/common/basSwarmJson.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o: lib/libSwarmNet/source/common/clsBridgeLocal.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/DataDiver -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -Ilib/libSwarmCore/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeLocal.o lib/libSwarmNet/source/common/clsBridgeLocal.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeRemote.o: lib/libSwarmNet/source/common/clsBridgeRemote.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/DataDiver -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -Ilib/libSwarmCore/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/common/clsBridgeRemote.o lib/libSwarmNet/source/common/clsBridgeRemote.cpp
 
 ${OBJECTDIR}/lib/libSwarmNet/source/common/clsHeartbeat.o: lib/libSwarmNet/source/common/clsHeartbeat.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/common
