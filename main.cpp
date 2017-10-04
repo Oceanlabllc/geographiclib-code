@@ -38,6 +38,7 @@
 
     #include "clsSerial_Xbee.h"
     #include "clsSerial_Xbee.h"
+#include "clsSwarm_DD_FullSim.h"
     #include <sys/wait.h>
     #include <sys/types.h>
     #include <csignal>
@@ -439,6 +440,28 @@
             _pSwarmO = pS;
         }        
         
+        //---------------------------------------------------                                                       
+        else if (cfg.mode == "DATADIVER_FULLSIM")
+        //---------------------------------------------------                                                       
+        {
+            
+            location_s origin, tablet;
+            
+            origin.lat = cfg.originlat;
+            origin.lon = cfg.originlon;
+            tablet.lat = cfg.tabletlat;
+            tablet.lon = cfg.tabletlon;           
+            
+            clsSwarm_DD_FullSim *pS = new clsSwarm_DD_FullSim(); 
+               
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DD_FullSim");            
+                       
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.localIP, cfg.localPort,  cfg.vehicles)) {            
+                ERROR_RETURN("Failed clsSwarm_DD_FullSim begin.");
+            }
+            
+            _pSwarmO = pS;
+        } 
         //---------------------------------------------------                                                       
         else
         //---------------------------------------------------                                                       
