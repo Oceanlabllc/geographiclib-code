@@ -38,6 +38,8 @@
 
     #include "clsSerial_Xbee.h"
     #include "clsSerial_Xbee.h"
+#include "clsSwarm_DataDiver_LocalBridge.h"
+#include "clsSwarm_DataDiver_RemoteBridge.h"
     #include <sys/wait.h>
     #include <sys/types.h>
     #include <csignal>
@@ -417,6 +419,46 @@
         }
         
         //---------------------------------------------------                                                       
+        else if (cfg.mode == "DATADIVER-SATLINK-SERVER")
+        //---------------------------------------------------                                                       
+        {                                               
+            clsSwarm_DataDiver_LocalBridge *pS = new clsSwarm_DataDiver_LocalBridge();
+            
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DataDiver_LocalBridge");            
+                      
+            if (!pS->begin("/dev/RADIO_SWARM", "/dev/RADIO_RC",(basJsonServer_Callbacks *)&_serverO, cfg.localIP, cfg.localPort, "algOverride_DD.json")){
+                ERROR_RETURN("Failed clsSwarm_DataDiver_LocalBridge begin.");
+            }
+            
+            _pSwarmO = pS;
+            
+        }
+        
+        //---------------------------------------------------                                                       
+        else if (cfg.mode == "DATADIVER-SATLINK-REMOTE")
+        //---------------------------------------------------                                                       
+        {
+            basTransport_UDP::udpSetup_s udpSetup;
+            
+            udpSetup.in.address.address = cfg.remoteIP;
+            udpSetup.in.address.port = cfg.remotePort;
+            udpSetup.out.address.address = cfg.localIP;
+            udpSetup.out.address.port = cfg.localPort;
+            udpSetup.maxUDPPayloadSize = 90-24;
+                        
+            clsSwarm_DataDiver_RemoteBridge *pS = new clsSwarm_DataDiver_RemoteBridge();
+            
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DataDiver_RemoteBridge");            
+                      
+            if (!pS->begin((basJsonServer_Callbacks *)&_serverO,  udpSetup)){
+                ERROR_RETURN("Failed clsSwarm_DataDiver_RemoteBridge begin.");
+            }
+            
+            _pSwarmO = pS;            
+
+        }
+        
+        //---------------------------------------------------                                                       
         else if (cfg.mode == "DATADIVER_SIM")
         //---------------------------------------------------                                                       
         {
@@ -430,10 +472,10 @@
             
             clsSwarm_DataDiver_Sim *pS = new clsSwarm_DataDiver_Sim(); 
                
-            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_WAMV");            
+            if (pS == NULL) ERROR_RETURN("Failed New clsSwarm_DataDiver_Sim");            
                        
             if (!pS->begin((basJsonServer_Callbacks *)&_serverO, origin, tablet,cfg.localIP, cfg.localPort,  cfg.vehicles)) {            
-                ERROR_RETURN("Failed clsSwarm_WAMV begin.");
+                ERROR_RETURN("Failed clsSwarm_DataDiver_Sim begin.");
             }
             
             _pSwarmO = pS;

@@ -104,6 +104,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/libSwarmNet/source/common/clsMultiBridge.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsControl_RCDataDiver.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_LocalBridge.o \
+	${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_RemoteBridge.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_LocalBridge.o \
 	${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV_RemoteBridge.o \
@@ -514,6 +516,16 @@ ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o: lib/
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.o lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_LocalBridge.o: lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_LocalBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_LocalBridge.o lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_LocalBridge.cpp
+
+${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_RemoteBridge.o: lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_RemoteBridge.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_RemoteBridge.o lib/libSwarmNet/source/targets/DataDiver/clsSwarm_DataDiver_RemoteBridge.cpp
 
 ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.o: lib/libSwarmNet/source/targets/WAMV/clsSwarm_WAMV.cpp
 	${MKDIR} -p ${OBJECTDIR}/lib/libSwarmNet/source/targets/WAMV
