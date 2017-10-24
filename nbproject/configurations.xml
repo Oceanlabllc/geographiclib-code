@@ -141,6 +141,7 @@
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f4" displayName="vehicleSupport" projectFiles="true">
+          <itemPath>lib/vehicleSupport/source/common/Vector2D.cpp</itemPath>
           <itemPath>lib/vehicleSupport/source/targets/linux/clsGeoConverter.cpp</itemPath>
           <itemPath>lib/vehicleSupport/source/common/crc.c</itemPath>
           <itemPath>lib/vehicleSupport/source/common/geoCalc.cpp</itemPath>
@@ -744,6 +745,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="lib/vehicleSupport/source/common/Vector2D.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="lib/vehicleSupport/source/common/crc.c"
             ex="false"
             tool="0"
@@ -1327,6 +1333,11 @@
             flavor2="0">
       </item>
       <item path="lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="lib/vehicleSupport/source/common/Vector2D.cpp"
             ex="false"
             tool="1"
             flavor2="0">

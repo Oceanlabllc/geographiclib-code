@@ -139,6 +139,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_Switcher.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_Thermo.o \
 	${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.o \
+	${OBJECTDIR}/lib/vehicleSupport/source/common/Vector2D.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/geoCalc.o \
 	${OBJECTDIR}/lib/vehicleSupport/source/common/math-utils.o \
@@ -691,6 +692,11 @@ ${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.o: lib/swarmEngine/s
 	${MKDIR} -p ${OBJECTDIR}/lib/swarmEngine/src/common
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/DataDiver -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -Ilib/libSwarmCore/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.o lib/swarmEngine/src/common/clsSwarmAlg_ThermoB.cpp
+
+${OBJECTDIR}/lib/vehicleSupport/source/common/Vector2D.o: lib/vehicleSupport/source/common/Vector2D.cpp
+	${MKDIR} -p ${OBJECTDIR}/lib/vehicleSupport/source/common
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ilib/algTranslator/include/common -Ilib/libSwarmComm/include/common -Ilib/libSwarmNet/include/targets/DataDiver -Ilib/libSwarmComm/include/targets/linux -Ilib/vehicleSupport/include/common -Ilib/vehicleSupport/include/targets/linux -Imodule -Ilib/libSwarmSim/include/common -Ilib/libSwarmCore/include/common -Ilib/libSwarmCore/include/targets/DataDiver -Ilib/swarmEngine/include/common -Ilib/swarmEngine/include/targets/linux -Ilib/libSwarmNet/include/common -Ilib/libSwarmNet/include/targets/WAMV -Ilib/libSwarmCore/include/targets/WAMV -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/vehicleSupport/source/common/Vector2D.o lib/vehicleSupport/source/common/Vector2D.cpp
 
 ${OBJECTDIR}/lib/vehicleSupport/source/common/crc.o: lib/vehicleSupport/source/common/crc.c
 	${MKDIR} -p ${OBJECTDIR}/lib/vehicleSupport/source/common
