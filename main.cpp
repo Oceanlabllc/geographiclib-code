@@ -177,7 +177,7 @@
                 
         cout << "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&" <<endl;
         cout << "& BRIDGE WAMV" <<endl;
-        cout << "&  VERSION 0.0.5" <<endl;
+        cout << "&  VERSION 0.1.0" <<endl;
         cout << "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&" <<endl;
         cout << "STARTUP IN PROGRESS" << endl;
         cout << asctime(now) << endl;
